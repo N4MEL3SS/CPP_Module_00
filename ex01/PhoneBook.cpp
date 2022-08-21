@@ -3,13 +3,13 @@
 //		CONSTRUCTOR
 PhoneBook::PhoneBook()
 {
-	std::cout << "Class PhoneBook constructed" << std::endl;
+//	std::cout << "Class PhoneBook constructed" << std::endl;
 }
 
 //		DESTRUCTOR
 PhoneBook::~PhoneBook()
 {
-	std::cout << "Class PhoneBook destructed" << std::endl;
+//	std::cout << "Class PhoneBook destructed" << std::endl;
 }
 
 void PhoneBook::getInstruction()

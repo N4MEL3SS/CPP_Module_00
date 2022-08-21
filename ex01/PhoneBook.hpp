@@ -1,15 +1,25 @@
-//
-// Created by Christie Eladia on 09.08.2022.
-//
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
-#ifndef MODULE_0_PHONEBOOK_HPP
-#define MODULE_0_PHONEBOOK_HPP
+# include <iostream>
+# include "Contact.hpp"
+# include "Message.hpp"
 
+# define PHONE_BOOK_SIZE 8
 
 class PhoneBook
 {
+public:
+	PhoneBook();
+	~PhoneBook();
 
+	static void getInstruction();
+	void addContact();
+
+private:
+	Contact contacts[PHONE_BOOK_SIZE];
+
+	void fillContact(int index);
 };
 
-
-#endif //MODULE_0_PHONEBOOK_HPP
+#endif //PHONEBOOK_HPP

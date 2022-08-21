@@ -6,23 +6,15 @@ int	main()
 	PhoneBook phoneBookList;
 	std::string command;
 
-	PhoneBook::getInstruction();
-	while (std::getline(std::cin, command))
+	PhoneBook::getStartInstruction();
+	while (std::getline(std::cin, command) && command != "EXIT")
 	{
-		if (command == "EXIT")
-		{
-			std::cout << EXIT_MSG << std::endl;
-			return (0);
-		}
-		else if (command == "ADD")
-		{
+		if (command == "ADD")
 			phoneBookList.addContact();
-		}
 		else if (command == "SEARCH")
-		{
-
-		}
-		PhoneBook::getInstruction();
+			phoneBookList.searchContact();
+		PhoneBook::getStartInstruction();
 	}
+	std::cout << RED << EXIT_MSG << END << std::endl;
 	return (0);
 }

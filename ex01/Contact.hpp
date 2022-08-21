@@ -2,6 +2,7 @@
 # define CONTACT_HPP
 
 # include <iostream>
+# include <iomanip>
 # include "Message.hpp"
 
 class Contact
@@ -10,17 +11,21 @@ public:
 	Contact();
 	~Contact();
 
-	std::string GetFirstName() const;
-	std::string GetLastName() const;
-	std::string GetNickName() const;
-	std::string GetPhoneNumber() const;
-	std::string GetDarkestSecret() const;
+	std::string getFirstName() const;
+	std::string getLastName() const;
+	std::string getNickName() const;
+	std::string getPhoneNumber() const;
+	std::string getDarkestSecret() const;
 
-	void SetFirstName(std::string buffer);
-	void SetLastName(std::string buffer);
-	void SetNickName(std::string buffer);
-	void SetPhoneNumber(std::string buffer);
-	void SetDarkestSecret(std::string buffer);
+	void setFirstName(std::string buffer);
+	void setLastName(std::string buffer);
+	void setNickName(std::string buffer);
+	void setPhoneNumber(std::string buffer);
+	void setDarkestSecret(std::string buffer);
+
+	bool isEmpty();
+	void showColumn(std::string buffer);
+	void showContactInfo();
 
 private:
 	std::string _firstName;

@@ -13,13 +13,16 @@ public:
 	PhoneBook();
 	~PhoneBook();
 
-	static void getInstruction();
+	static void getStartInstruction();
+
 	void addContact();
+	void searchContact();
 
 private:
 	Contact contacts[PHONE_BOOK_SIZE];
 
-	void fillContact(int index);
+	static void getSearchInstruction();
+	void setContact(int index);
 };
 
 #endif //PHONEBOOK_HPP

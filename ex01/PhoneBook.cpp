@@ -79,7 +79,10 @@ void PhoneBook::searchContact()
 	while (std::getline(std::cin, command) && command != "MENU")
 	{
 		if (command.length() == 1 && (command[0] > '0' && command[0] < '9'))
-			contacts[std::stoi(command) - 1].showContactInfo();
+		{
+			contacts[(command[0] - '0') - 1].showContactInfo();
+			return;
+		}
 		getSearchInstruction();
 	}
 }
